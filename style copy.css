@@ -75,7 +75,7 @@ a:hover {
     color: var(--text-light);
 }
 
-nav{
+#navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,8 +98,7 @@ nav{
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: x-large;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--text-dark);
 }
 
@@ -134,7 +133,7 @@ nav{
     transition: transform 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover{
     transform: translateY(-2px);
 }
 
@@ -155,7 +154,7 @@ nav{
     color: var(--text-light);
 }
 
-.skill-card:hover {
+.skill-card:hover{
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(107,64,59,0.15);
 }
@@ -180,12 +179,18 @@ nav{
     padding: 2rem;
 }
 
+.project-card.featured{
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
 .project-card{
     position: relative;
     overflow: hidden;
     border-radius: 12px;
     background: var(--secondary-color);
     color: var(--text-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-content{
@@ -195,36 +200,72 @@ nav{
     padding: 1.5rem;
 }
 
-.project-header {
+.project-header{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 1rem;
 }
-.project-tags {
+
+.project-tags{
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: auto; /* Pushes tags to bottom */
 }
 
-:root {
+.contact-connect{
+    background-color: var(--secondary-color);
+    padding: 30px;
+}
+
+.form-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+    align-content: center;
+}
+
+.form-group{
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+}
+
+.form-group input{
+    width: 80%;
+    margin-left: 10px;
+}
+
+.form-group textarea{
+    width: 80%;
+    height: 100px;
+    margin-left: 10px;
+}
+
+.form-group-full .btn{
+    width: 50%;
+    align-self: center;
+}
+
+:root{
     font-size: clamp(14px, 2vw, 18px);
 }
 
-h1 {
+h1{
     font-size: clamp(2rem, 5vw, 4rem);
 }
 
-h2 {
+h2{
     font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-.card-container {
+.card-container{
     container-type: inline-size;
 }
 
-@container (min-width: 400px) {
+@container (min-width: 400px){
     .card {
         display: grid;
         grid-template-columns: 150px 1fr;
